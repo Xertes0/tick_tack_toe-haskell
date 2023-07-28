@@ -11,23 +11,23 @@ windowHeight = windowWidth
 windowSize :: (Int, Int)
 windowSize = (round windowWidth, round windowHeight)
 
-data Tile =
-  Empty |
-  TileX |
-  TileO
+data Tile
+  = Empty
+  | TileX
+  | TileO
   deriving (Show, Eq)
 
 type Board = Seq Tile
 
-data Player =
-  PlayerX |
-  PlayerO
+data Player
+  = PlayerX
+  | PlayerO
   deriving (Show)
 
-data GameState =
-  XTurn |
-  OTurn |
-  GameOver (Maybe Player)
+data GameState
+  = XTurn
+  | OTurn
+  | GameOver (Maybe Player)
   deriving (Show)
 
 data State = State
